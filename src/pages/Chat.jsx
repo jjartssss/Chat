@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 
 
-const socket = io.connect("https://testserver-aptd.onrender.com")
-
+// const socket = io.connect("https://testserver-aptd.onrender.com")
+// const socket = io.connect("http://localhost:3001")
+const socket = io("https://testserver-aptd.onrender.com");
 const Chat = () => {
     const [message, setMessage] = useState("");
     const [room, setRoom] = useState("");
